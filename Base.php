@@ -19,7 +19,14 @@ $multi=$a*$b;
 $del=$a/$b;
 
 // here output
-
+echo("summa: " . $sum);
+echo ("<br");
+echo("Subtraction: " . $min);
+echo ("<br");
+echo("Multiplying: " . $multi);
+echo ("<br");
+echo("Dividing: " . $del);
+echo ("<br");
 //
 ?>
 </body>
