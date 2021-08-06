@@ -1,26 +1,45 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Calculator</title>
-</head>
-<body>
 <?php
-// here input
 
-//
+if($_POST['sibmit'])
+{
+    $a = (int)$_POST['first'];
+    $b = (int)$_POST['operation'];
+    $p = $_POST['operation'];
+    $c;
+    if ($p == "+")
+        $c = $a + $b;
+    else if($p == "-")
+        $c = $a - $b;
+    else if($p == "*")
+        $c = $a * $b;
+    else if ($p = "/")
+    {
+        if($b == 0)
+            echo "Cannot divide by 0";
+        else $c = $a / $b;
+    }
+}
 
-$sum=$a+$b;
-$min=$a-$b;
-$multi=$a*$b;
-$del=$a/$b;
-
-// here output
-
-//
 ?>
-</body>
-</html>
+
+<form action = "" method = "post">
+
+    <input type = "text" name = "first" required>
+
+    <select name = "operation" required>
+        <option value = "+">+</option>
+        <option value = "-">-</option>
+        <option value = "*">*</option>
+        <option value = "/">/</option>
+    </select>
+
+    <input type = "text" name = "second" required>
+
+    <input type = "submit" name  = "submit">
+
+</form>
+
+<?php
+if($c)
+    echo $c;
+?>
