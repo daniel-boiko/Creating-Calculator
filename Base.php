@@ -22,6 +22,7 @@ if($_POST['sibmit'])
 
 ?>
 
+
 <form action = "" method = "post">
 
     <input type = "text" name = "first" required>
@@ -43,3 +44,19 @@ if($_POST['sibmit'])
 if($c)
     echo $c;
 ?>
+
+
+// here output
+echo("summa: " . $sum);
+echo ("<br");
+echo("Subtraction: " . $min);
+echo ("<br");
+echo("Multiplying: " . $multi);
+echo ("<br");
+echo("Dividing: " . $del);
+echo ("<br");
+//
+?>
+</body>
+</html>
+
